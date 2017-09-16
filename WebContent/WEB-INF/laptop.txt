@@ -1,4 +1,4 @@
-1, MacBook air, 2013, 4GB, 2.9 GHz, 500BG, $1200, Bob Ross
-2, MacBook pro, 2017, 16BG, 3.2 GHz, 1TB, $2330, Chris Martin
-3, MacBook pro, 2013, 8GB, 1.7 GHz, 250GB, $1900, Altair Smith
-4, MacBook air, 2016, 8GB, 1.GHz, 250GB, $1333, Sarah Marsh 
+1, MacBook air, 2013, 4GB, 2.9 GHz, 500GB, 1200, Bob Ross
+2, MacBook pro, 2017, 16GB, 3.2 GHz, 1TB, 2330, Chris Martin
+3, MacBook pro, 2013, 8GB, 1.7 GHz, 250GB, 1900, Altair Smith
+4, MacBook air, 2016, 8GB, 1.GHz, 250GB, 1333, Sarah Marsh 

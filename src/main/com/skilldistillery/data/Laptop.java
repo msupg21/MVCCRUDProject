@@ -5,9 +5,10 @@ public class Laptop {
 	private String name;
 	private String seller;
 	private int year;
-	private int ram;
-	private double processor;
-	private double hardDrive;
+	private double price;
+	private String ram;
+	private String processor;
+	private String hardDrive;
 
 	public String getName() {
 		return name;
@@ -33,35 +34,42 @@ public class Laptop {
 		this.year = year;
 	}
 
-	public int getRam() {
+	public String getRam() {
 		return ram;
 	}
 
-	public void setRam(int ram) {
+	public void setRam(String ram) {
 		this.ram = ram;
 	}
 
-	public double getProcessor() {
+	public String getProcessor() {
 		return processor;
 	}
 
-	public void setProcessor(double processor) {
+	public void setProcessor(String processor) {
 		this.processor = processor;
 	}
 
-	public double getHardDrive() {
+	public String getHardDrive() {
 		return hardDrive;
 	}
 
-	public void setHardDrive(double hardDrive) {
+	public void setHardDrive(String hardDrive) {
 		this.hardDrive = hardDrive;
 	}
 
-	public Laptop(int num, String name, String seller, int year, int ram, double processor, double hardDrive) {
-		this.stockNum = num;
+	public Laptop() {
+
+	}
+
+	public Laptop(int stockNum, String name, String seller, int year, double price, String ram, String processor,
+			String hardDrive) {
+		super();
+		this.stockNum = stockNum;
 		this.name = name;
 		this.seller = seller;
 		this.year = year;
+		this.price = price;
 		this.ram = ram;
 		this.processor = processor;
 		this.hardDrive = hardDrive;
@@ -69,8 +77,24 @@ public class Laptop {
 
 	@Override
 	public String toString() {
-		return "Laptop [name=" + name + ", seller=" + seller + ", year=" + year + ", ram=" + ram + ", processor="
-				+ processor + ", hardDrive=" + hardDrive + "]";
+		return "Laptop [stockNum=" + stockNum + ", name=" + name + ", seller=" + seller + ", year=" + year + ", price="
+				+ price + ", ram=" + ram + ", processor=" + processor + ", hardDrive=" + hardDrive + "]";
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public int getStockNum() {
+		return stockNum;
+	}
+
+	public void setStockNum(int stockNum) {
+		this.stockNum = stockNum;
 	}
 
 }
