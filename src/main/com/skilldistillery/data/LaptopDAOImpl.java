@@ -1,6 +1,9 @@
 package com.skilldistillery.data;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -47,21 +50,41 @@ public class LaptopDAOImpl implements LaptopDAO {
 
 	@Override
 	public void add(Laptop laptop) {
-		// TODO Auto-generated method stub
+		String path = wac.getServletContext().getRealPath(FILE_NAME);
+		try {
+			FileWriter writer = new FileWriter(path);
+			BufferedWriter bf = new BufferedWriter(writer);
+			bf.write(laptop.getStockNum()+ ", " + laptop.getName() + ", " +
+					laptop.getYear()+ ", " + laptop.getRam() + ", " + laptop.getProcessor() + ", " +
+					laptop.getHardDrive() + ", " + laptop.getPrice() + ", " +
+					laptop.getSeller() + '\n');
+			writer.close();
+			bf.flush();
+			bf.close();
+		} catch (IOException e) {
+			System.out.println(e);
+		}
 
 	}
 
 	@Override
-	public void edit(Laptop laptop) {
-		// TODO Auto-generated method stub
-
+	public Laptop edit(Laptop laptop) {
+		return laptop;
 	}
 
 	@Override
 	public void delete(int stockNum) {
-		// TODO Auto-generated method stub
+		Laptop l = null;
+		for (Laptop laptop : laptops) {
+			if (laptop.getStockNum() == stockNum) {
+				l = laptop;
+				break;
+			}
+		}
+		laptops.remove(l.getStockNum());
 
 	}
+	
 
 	@Override
 	public Laptop getLaptopById(int stockNumber) {

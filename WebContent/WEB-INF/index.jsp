@@ -4,16 +4,35 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<link type="text/css" href="master.css" rel="stylesheet">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Bienvenidos a MACBOOK RESALE LAND!</title>
 </head>
 <body>
+	<h1>WELCOME TO MACBOOK RESALE LAND</h1>
 	<h2>Laptop Inventory</h2>
-	<c:forEach var="l" items="${laptops}">${l.stockNum} ${l.name}<br></c:forEach>
+	<c:forEach var="l" items="${laptops}">
+		<p class="mainList"><strong>Stock number#</strong> ${l.stockNum}<br>  ${l.name} — YEAR: ${l.year}
+			$${l.price}</p>
+		<br>
+	</c:forEach>
 	<h2>Search by stock number:</h2>
-	<form action="getLaptop.do" method="GET">
-		Enter stock number: <input type="text" name="id" />
-	</form>
+	<form action="getLaptop.do" method="POST">
+		<center>
+			Enter stock number:<br>To see laptop details<br> <input type="text" name="id" />
+		</center>
+	</form> 
+ 
+
+	<center>
+	<a href="addLaptop.jsp">Add A Laptop (JSP)</a><br>
+	<a href="updateLaptop.jsp">Update A Laptop (JSP)</a><br>
+	<a href="deleteLaptop.jsp">Remove A Laptop (JSP)</a><br>
+	<a href="add.html">Add A Laptop (HTML)</a><br>
+	<a href="update.html">Update A Laptop (HTML)</a><br>
+	<a href="delete.html">Remove A Laptop (HTML)</a><br>
+	
+	</center>
 
 </body>
 </html>

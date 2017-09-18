@@ -4,27 +4,26 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<link type="text/css" href="laptop.css" rel="stylesheet">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Laptop ${laptop.name}Result</title>
 </head>
 <body>
+<h1>SEARCH RESULTS</h1>
 	<c:choose>
 		<c:when test="${! empty laptop}">
-			<ul>
-				<li>${laptop.stockNum}</li>
-				<li>${laptop.name}</li>
-				<li>${laptop.year}</li>
-				<li>${laptop.ram}</li>
-				<li>${laptop.processor}</li>
-				<li>${laptop.hardDrive}</li>
-				<li>${laptop.price}</li>
-				<li>${laptop.seller}</li>
-			</ul>
+			<p class="mainList">
+				${l.stockNum}<br> ${laptop.name} —
+				YEAR: ${laptop.year} <br>Price $${laptop.price}<br> SPECS: Ram: ${laptop.ram}      Processor: ${laptop.processor}
+				      HardDrive: ${laptop.hardDrive}<br>Seller: ${laptop.seller}
+			</p>
 		</c:when>
 		<c:otherwise>
 			<p>No Laptop found</p>
 		</c:otherwise>
 	</c:choose>
-
+	<form action="http://localhost:8080/MVCCRUDProject/" > 
+  <button type="submit">Return to  view full inventory</button>
+</form> 
 </body>
 </html>

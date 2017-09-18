@@ -1,0 +1,52 @@
+body {
+	background:
+		url("http://static3.businessinsider.com/image/581a0e50362ca4892e8b635a/5-cheaper-and-better-alternatives-to-apples-expensive-new-macbook-pros.jpg")
+		no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+h1 {
+	color: white; font-family : serif;
+	text-align: center;
+	text-decoration: underline;
+	font-family: serif;
+}
+
+h2 {
+	font-family: serif;
+	text-align: center;
+	text-decoration: underline;
+}
+
+.mainList {
+	height: 160px;
+	width: 650px;
+	background-color: rgba(0, 0, 0, 0.4);
+	color: white;
+	text-align: center;
+	margin: 100px 275px auto;
+	font-weight: 100;
+	font-size: 20px;
+	position: relative;
+	border-radius: 100px;
+}
+
+button {
+	background-color: red;
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 10px;
+	position: relative;
+	left: 41%;
+	right: 40%;
+	margin-top:90px;
+	
+}
