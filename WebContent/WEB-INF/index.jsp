@@ -25,13 +25,9 @@
  
 
 	<center>
-	<a href="addLaptop.jsp">Add A Laptop (JSP)</a><br>
+	<a href="viewAddLaptop.do">Add A Laptop</a><br>
 	<a href="updateLaptop.jsp">Update A Laptop (JSP)</a><br>
 	<a href="deleteLaptop.jsp">Remove A Laptop (JSP)</a><br>
-	<a href="add.html">Add A Laptop (HTML)</a><br>
-	<a href="update.html">Update A Laptop (HTML)</a><br>
-	<a href="delete.html">Remove A Laptop (HTML)</a><br>
-	
 	</center>
 
 </body>

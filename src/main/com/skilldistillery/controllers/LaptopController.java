@@ -27,7 +27,6 @@ public class LaptopController {
 		List<Laptop> allLaptops = dao.getAllLaptops();
 		mv.addObject("laptops", allLaptops);
 		mv.setViewName("WEB-INF/index.jsp");
-
 		return mv;
 	}
 
@@ -37,33 +36,42 @@ public class LaptopController {
 		model.addAttribute("laptop", laptopById);
 		return "WEB-INF/laptop.jsp";
 	}
-	
+
 	@RequestMapping("addLaptop.do")
-	public String addLaptop(@RequestParam("id") int id, @RequestParam("name") String name, @RequestParam("seller") String seller,
-			@RequestParam("year") int year, @RequestParam("price") double price, @RequestParam("ram") String ram,
-			@RequestParam("processor") String processor, @RequestParam("hardDrive") String hardDrive) {
-		//dao.add(new Laptop(id, name, seller, year, price, ram, processor, hardDrive));
-		return "WEB-INF/addLaptop.jsp";
-	} 
+	public ModelAndView addLaptop(@RequestParam("id") int id, @RequestParam("name") String name,
+			@RequestParam("seller") String seller, @RequestParam("year") int year, @RequestParam("price") double price,
+			@RequestParam("ram") String ram, @RequestParam("processor") String processor,
+			@RequestParam("hardDrive") String hardDrive) {
+		ModelAndView mv = new ModelAndView();
+		Laptop laptop = new Laptop(id, name, seller, year, price, ram, processor, hardDrive);
+		dao.add(laptop);
+		mv.addObject("l", laptop); // 'l' is just a reference to the object
+		// when using a jsp view, should always pass a reference to the object and the object.
+		List<Laptop> allLaptops = dao.getAllLaptops();
+		mv.addObject("laptops", allLaptops);
+		mv.setViewName("WEB-INF/index.jsp");
+		return mv;
+	}
 	
+	@RequestMapping("viewAddLaptop.do") //need a method that leads to each jsp 
+	public ModelAndView test() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("WEB-INF/addLaptop.jsp");
+		return mv;
+	}
+
 	@RequestMapping("deleteLaptop.do")
-	public String deleteLaptop() {
-		//Laptop laptopById = dao.getLaptopById(id);
-		//model.addAttribute("laptop", laptopById);
-		return "WEB-INF/deleteLaptop.jsp";
+	public ModelAndView deleteLaptop(@RequestParam("id") int id) { // delete by stock number
+		ModelAndView mv = new ModelAndView();
+		return mv;
 	}
-	
+
 	@RequestMapping("updateLaptop.do")
-	public String updateLaptop() {
-		//Laptop laptopById = dao.getLaptopById(id);
-		//model.addAttribute("laptop", laptopById);
-		return "WEB-INF/updateLaptop.jsp";
+	public ModelAndView updateLaptop(@RequestParam("id") int id) { //update by stock number
+		ModelAndView mv = new ModelAndView();
+		return mv;
 	}
-	
-	
-	
-	//public String addLaptop(@ModelAttribute ("laptop") Laptop laptop)
-	// delete
-	// edit
+
+
 
 }

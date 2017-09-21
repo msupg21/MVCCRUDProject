@@ -51,6 +51,7 @@ public class LaptopDAOImpl implements LaptopDAO {
 	@Override
 	public void add(Laptop laptop) {
 		String path = wac.getServletContext().getRealPath(FILE_NAME);
+		laptops.add(laptop); // needed to add the laptop object being passed
 		try {
 			FileWriter writer = new FileWriter(path);
 			BufferedWriter bf = new BufferedWriter(writer);
@@ -61,16 +62,17 @@ public class LaptopDAOImpl implements LaptopDAO {
 			writer.close();
 			bf.flush();
 			bf.close();
+			
 		} catch (IOException e) {
 			System.out.println(e);
 		}
 
 	}
 
-	@Override
-	public Laptop edit(Laptop laptop) {
-		return laptop;
-	}
+//	@Override
+//	public Laptop edit(Laptop laptop) {
+//		return laptop;
+//	}
 
 	@Override
 	public void delete(int stockNum) {
@@ -102,6 +104,12 @@ public class LaptopDAOImpl implements LaptopDAO {
 	@Override
 	public List<Laptop> getAllLaptops() {
 		return laptops;
+	}
+
+	@Override
+	public void edit(Laptop laptop) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

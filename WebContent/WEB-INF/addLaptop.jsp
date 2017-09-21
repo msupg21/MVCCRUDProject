@@ -32,7 +32,7 @@
 		
 		<input type="submit" value="Add Laptop to Inventory" />
 	</form>
-	<form action="http://localhost:8080/MVCCRUDProject/" > 
+	<form action="addLaptop.do" > 
   <button type="submit">Return to Main Menu</button>
 	</form>
 </body>

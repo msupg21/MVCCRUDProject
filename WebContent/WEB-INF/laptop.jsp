@@ -24,6 +24,7 @@
 	</c:choose>
 	<form action="http://localhost:8080/MVCCRUDProject/" > 
   <button type="submit">Return to  view full inventory</button>
-</form> 
+	</form>
+	 
 </body>
 </html>
