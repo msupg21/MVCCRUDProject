@@ -14,21 +14,21 @@
 <h1>Add Laptop Product Form</h1>
 <form action="addLaptop.do" method="POST">
 		Stock Number:
-		<input type="text" name="id" value="id*"/><br/>
+		<input type="text" name="id" value="1"/><br/>
 		Laptop:
 		<input type="text" name="name" value="name*"/><br/>
 		Seller:
 		<input type="text" name="seller" value="seller*"/><br/>
 		Model Year:
-		<input type="text" name="year" value="year*"/><br/>
+		<input type="text" name="year" value="2017"/><br/>
 		Price:
-		<input type="text" name="price" value="price*"/><br/>
+		<input type="text" name="price" value="1200"/><br/>
 		RAM:
 		<input type="text" name="ram" value="ram*"/><br/>
 		Processor:
 		<input type="text" name="processor" value="processor*"/><br/>
 		Hard Drive
-		<input type="text" name="hardDrive" value="hardDrive*"/><br/>
+		<input type="text" name="hardDrive" value="120 gb"/><br/>
 		
 		<input type="submit" value="Add Laptop to Inventory" />
 	</form>
