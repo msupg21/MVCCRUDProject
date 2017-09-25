@@ -75,6 +75,20 @@ public class Laptop {
 		this.hardDrive = hardDrive;
 	}
 
+	public Laptop(String stockNumString, String name, String seller, String yearString, String priceString, String ram, String processor,
+			String hardDrive) {
+		super();
+		
+		stockNum = Integer.parseInt(stockNumString);
+		this.name = name;
+		this.seller = seller;
+		this.year = Integer.parseInt(yearString);
+		this.price = Double.parseDouble(priceString);
+		this.ram = ram;
+		this.processor = processor;
+		this.hardDrive = hardDrive;
+	}
+
 	@Override
 	public String toString() {
 		return "Laptop [stockNum=" + stockNum + ", name=" + name + ", seller=" + seller + ", year=" + year + ", price="

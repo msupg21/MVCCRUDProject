@@ -32,7 +32,7 @@
 		
 		<input type="submit" value="Add Laptop to Inventory" />
 	</form>
-	<form action="addLaptop.do" > 
+	<form action="index.do" > 
   <button type="submit">Return to Main Menu</button>
 	</form>
 </body>
